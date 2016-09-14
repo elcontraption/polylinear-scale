@@ -37,4 +37,17 @@ describe('#polylinearScale()', function () {
     expect(polylinearScale([-10, -5, 43], [-100, 0, 10])(4)).to.be.closeTo(1.875, precision)
     expect(polylinearScale([-74.562, 7.345, 99.1], [-1, 3, 234239])(489.5)).to.be.closeTo(1230868.4414473327, precision)
   })
+
+  it('should support values outside the given domain or range', () => {
+    expect(polylinearScale([0, 100], [0, 10])(101)).to.be.closeTo(10.1, precision)
+    expect(polylinearScale([0, 100], [0, 10])(-1)).to.equal(-0.1)
+    expect(polylinearScale([-6078.9, 0, 400], [-16.7, 3, 10])(506)).to.be.closeTo(11.854999999999999, precision)
+  })
+
+  it ('should support clamping values outside of the given domain or range', () => {
+    expect(polylinearScale([0, 100], [0, 10], true)(101)).to.equal(10)
+    expect(polylinearScale([0, 100], [0, 10], true)(-98)).to.equal(0)
+    expect(polylinearScale([-167, -4.6, 430], [-18, 8, 106], true)(498)).to.equal(106)
+    expect(polylinearScale([-189, -4.6, 30.7], [-1.22225, 77.5, 106], true)(-9901)).to.equal(-1.22225)
+  })
 })

@@ -1,12 +1,9 @@
 {
   "name": "polylinear-scale",
-  "version": "0.1.0",
-  "author": "Darin Reid <darin@elcontraption.com>",
-  "scripts": {
-    "lint": "eslint index.js",
-    "test": "npm run lint && mocha test.js"
-  },
-  "license": "GPL-3.0",
+  "version": "1.0.0",
+  "description": "Create piecewise linear scales à la d3",
+  "main": "index.js",
+  "dependencies": {},
   "devDependencies": {
     "chai": "3.5.0",
     "eslint": "3.4.0",
@@ -14,5 +11,28 @@
     "eslint-plugin-promise": "2.0.1",
     "eslint-plugin-standard": "2.0.0",
     "mocha": "3.0.2"
-  }
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "npm run lint && mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elcontraption/polylinear-scale.git"
+  },
+  "keywords": [
+    "polylinear",
+    "linear",
+    "scale",
+    "piecewise",
+    "clamp",
+    "domain",
+    "range"
+  ],
+  "author": "Darin Reid <darin@elcontraption.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/elcontraption/polylinear-scale/issues"
+  },
+  "homepage": "https://github.com/elcontraption/polylinear-scale#readme"
 }

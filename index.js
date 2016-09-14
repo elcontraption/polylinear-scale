@@ -45,7 +45,6 @@ function scale (value) {
 
   /* eslint-disable no-sequences */
   while (i < domains.length - 1) {
-    // If value is between two domain numbers
     if (value >= domains[i] && value <= domains[i + 1]) {
       domain = [domains[i], domains[i + 1]],
       range = [ranges[i], ranges[i + 1]]
@@ -58,7 +57,7 @@ function scale (value) {
   if (domain === undefined) {
     if (value < domains[0]) {
       domain = [domains[0], domains[1]]
-      range = [domains[0], domains[1]]
+      range = [ranges[0], ranges[1]]
     } else {
       domain = [domains[domains.length - 2], domains[domains.length - 1]]
       range = [ranges[ranges.length - 2], ranges[ranges.length - 1]]
@@ -67,6 +66,10 @@ function scale (value) {
 
   ratio = (range[1] - range[0]) / (domain[1] - domain[0])
   result = range[0] + ratio * (value - domain[0])
+
+  if (config.clamp) {
+    result = Math.min(range[1], Math.max(range[0], result))
+  }
 
   return result
 }
