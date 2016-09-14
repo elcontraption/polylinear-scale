@@ -34,5 +34,7 @@ describe('#polylinearScale()', function () {
 
   it('should support multiple piecewise scales', () => {
     expect(polylinearScale([-600, 0, 400], [-10, 0, 10])(400)).to.equal(10)
+    expect(polylinearScale([-10, -5, 43], [-100, 0, 10])(4)).to.be.closeTo(1.875, precision)
+    expect(polylinearScale([-74.562, 7.345, 99.1], [-1, 3, 234239])(489.5)).to.be.closeTo(1230868.4414473327, precision)
   })
 })
