@@ -1,4 +1,4 @@
-# `polylinear-scale`
+# polylinear-scale
 
 Create piecewise linear scales à la [d3](https://github.com/d3/d3-scale#continuous_domain):
 
