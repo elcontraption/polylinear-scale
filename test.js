@@ -49,5 +49,6 @@ describe('#polylinearScale()', function () {
     expect(polylinearScale([0, 100], [0, 10], true)(-98)).to.equal(0)
     expect(polylinearScale([-167, -4.6, 430], [-18, 8, 106], true)(498)).to.equal(106)
     expect(polylinearScale([-189, -4.6, 30.7], [-1.22225, 77.5, 106], true)(-9901)).to.equal(-1.22225)
+    expect(polylinearScale([-300, 0, 300], [0.5, 0.8, 0.5], true)(100)).to.be.closeTo(0.7000000000000001, precision)
   })
 })

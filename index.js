@@ -68,7 +68,9 @@ function scale (value) {
   result = range[0] + ratio * (value - domain[0])
 
   if (config.clamp) {
-    result = Math.min(range[1], Math.max(range[0], result))
+    let rangeMin = Math.min(range[0], range[1])
+    let rangeMax = Math.max(range[0], range[1])
+    result = Math.min(rangeMax, Math.max(rangeMin, result))
   }
 
   return result
