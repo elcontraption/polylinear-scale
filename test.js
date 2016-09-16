@@ -4,7 +4,7 @@ global.chai = chai
 global.expect = global.chai.expect
 
 const polylinearScale = require('./')
-const name = polylinearScale.name
+const name = 'polylinearScale'
 const precision = 0.0000001
 
 describe('#polylinearScale()', function () {
@@ -50,5 +50,6 @@ describe('#polylinearScale()', function () {
     expect(polylinearScale([-167, -4.6, 430], [-18, 8, 106], true)(498)).to.equal(106)
     expect(polylinearScale([-189, -4.6, 30.7], [-1.22225, 77.5, 106], true)(-9901)).to.equal(-1.22225)
     expect(polylinearScale([-300, 0, 300], [0.5, 0.8, 0.5], true)(100)).to.be.closeTo(0.7000000000000001, precision)
+    expect(polylinearScale([-1000, 0, 1000], [500, 0, 500], true)(0.046314659954703075)).to.be.closeTo(0.023157329977351537, precision)
   })
 })

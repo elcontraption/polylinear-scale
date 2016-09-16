@@ -37,11 +37,15 @@ function polylinearScale (domain, range, clamp) {
 function scale (value) {
   const domains = config.domain
   const ranges = config.range
+  var rangeMin
+  var rangeMax
   var domain
   var range
   var ratio
   var result
   var i = 0
+
+  // problem, range might be [500, 0, 500]
 
   /* eslint-disable no-sequences */
   while (i < domains.length - 1) {
@@ -68,14 +72,16 @@ function scale (value) {
   result = range[0] + ratio * (value - domain[0])
 
   if (config.clamp) {
-    let rangeMin = Math.min(range[0], range[1])
-    let rangeMax = Math.max(range[0], range[1])
+    rangeMin = Math.min(range[0], range[1])
+    rangeMax = Math.max(range[0], range[1])
     result = Math.min(rangeMax, Math.max(rangeMin, result))
   }
 
   return result
 }
 
-module.exports.name = name
+// module.exports = polylinearScale
 
-module.exports = polylinearScale
+export default function () {
+  return polylinearScale()
+}
