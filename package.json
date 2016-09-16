@@ -1,6 +1,6 @@
 {
   "name": "polylinear-scale",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create piecewise linear scales à la d3",
   "main": "index.js",
   "dependencies": {},
