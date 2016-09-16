@@ -80,8 +80,4 @@ function scale (value) {
   return result
 }
 
-// module.exports = polylinearScale
-
-export default function () {
-  return polylinearScale()
-}
+module.exports = polylinearScale
