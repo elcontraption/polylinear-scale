@@ -31,6 +31,7 @@ console.log(clamped(11)) // 10
 ```
 
 ## Contributing
+Uses [JavaScript Standard Style](http://standardjs.com/).
 
 ```sh
 # test
