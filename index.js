@@ -8,7 +8,7 @@ const config = {}
  * @param  {Number} value The number to scale
  * @return {Number}       The result
  */
-function scale (value) {
+const scale = function (value) {
   const domains = config.domain
   const ranges = config.range
   var rangeMin
