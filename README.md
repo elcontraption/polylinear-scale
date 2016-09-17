@@ -24,7 +24,7 @@ console.log(polylinear(10)) // 5
 console.log(polylinear(-10)) // -5
 
 // clamping
-const clamped = polylinearScale([-10, 0, 10], [-5, 2, 10])
+const clamped = polylinearScale([-10, 0, 10], [-5, 2, 10], true)
 console.log(clamped(11)) // 10
 ```
 
