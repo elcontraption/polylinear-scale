@@ -7,6 +7,8 @@ Create piecewise linear scales à la [d3](https://github.com/d3/d3-scale#continu
 - Supports domains and ranges with more than two values each.
 - Supports clamping to range.
 
+For many more features, see [d3-scale](https://github.com/d3/d3-scale).
+
 For an even simpler version that does not support multiple piecewise scales, see [simple-linear-scale](https://github.com/mapbox/simple-linear-scale).
 
 ## Example
