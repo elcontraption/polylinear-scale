@@ -1,6 +1,6 @@
 const name = 'polylinearScale'
 
-var config = {}
+const config = {}
 
 /**
  * A polylinear scale
