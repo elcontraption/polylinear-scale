@@ -1,5 +1,3 @@
-const name = 'polylinearScale'
-
 const config = {}
 
 /**
@@ -68,7 +66,7 @@ function polylinearScale (domain, range, clamp) {
   clamp = clamp || false
 
   if (domain.length !== range.length) {
-    throw new Error(`${name} requires domain and range to have an equivalent number of values`)
+    throw new Error('polylinearScale requires domain and range to have an equivalent number of values')
   }
 
   config.domain = domain
