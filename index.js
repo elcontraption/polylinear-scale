@@ -60,7 +60,7 @@ const scale = function (value) {
  * @param  {Boolean} clamp    Enables or disables clamping
  * @return {Function}         Scale function
  */
-function polylinearScale (domain, range, clamp) {
+const polylinearScale = function (domain, range, clamp) {
   domain = domain || [0, 1]
   range = range || [0, 1]
   clamp = clamp || false
