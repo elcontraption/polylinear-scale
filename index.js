@@ -1,4 +1,4 @@
-const config = {}
+var config = {}
 
 /**
  * The compiled scale to return
@@ -6,7 +6,7 @@ const config = {}
  * @param  {Number} value The number to scale
  * @return {Number}       The result
  */
-const scale = function (value) {
+function scale (value) {
   const domains = config.domain
   const ranges = config.range
   var rangeMin
@@ -60,7 +60,7 @@ const scale = function (value) {
  * @param  {Boolean} clamp    Enables or disables clamping
  * @return {Function}         Scale function
  */
-const polylinearScale = function (domain, range, clamp) {
+function polylinearScale (domain, range, clamp) {
   domain = domain || [0, 1]
   range = range || [0, 1]
   clamp = clamp || false
