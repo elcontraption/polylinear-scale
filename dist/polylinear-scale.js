@@ -1,4 +1,4 @@
-var PolylinearScale = (function () {
+var polylinearScale = (function () {
 'use strict';
 
 /**

@@ -17,7 +17,7 @@ let config = {
 rollup.rollup(config).then(bundle => {
   bundle.write({
     format: 'iife',
-    moduleName: 'PolylinearScale',
+    moduleName: 'polylinearScale',
     dest: 'dist/polylinear-scale.js'
   })
 }).catch(err => console.error(err.stack))
