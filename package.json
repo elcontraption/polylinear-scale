@@ -25,7 +25,7 @@
     "rollup": "node rollup",
     "uglify": "uglifyjs dist/polylinear-scale.js --output dist/polylinear-scale.min.js",
     "build": "npm run lint && npm run test && npm run rollup && npm run uglify",
-    "test": "mocha --compilers js:babel-core/register test.js"
+    "test": "mocha --compilers js:babel-core/register test/index.js"
   },
   "repository": {
     "type": "git",
