@@ -3,7 +3,7 @@ const chai = require('chai')
 global.chai = chai
 global.expect = global.chai.expect
 
-const polylinearScale = require('./')
+const polylinearScale = require('./src')
 const name = 'polylinearScale'
 const precision = 0.0000001
 

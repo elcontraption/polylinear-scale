@@ -1,4 +1,4 @@
-var config = {}
+const config = {}
 
 /**
  * The compiled scale to return

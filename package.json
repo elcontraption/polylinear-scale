@@ -5,16 +5,27 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "chai": "3.5.0",
     "eslint": "3.4.0",
     "eslint-config-standard": "6.0.0",
     "eslint-plugin-promise": "2.0.1",
     "eslint-plugin-standard": "2.0.0",
-    "mocha": "3.0.2"
+    "mocha": "3.0.2",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "uglify-js": "^2.7.5"
   },
   "scripts": {
-    "lint": "eslint index.js",
-    "test": "npm run lint && mocha test.js"
+    "lint": "eslint src/index.js",
+    "rollup": "node rollup",
+    "uglify": "uglifyjs dist/polylinear-scale.js --output dist/polylinear-scale.min.js",
+    "build": "npm run lint && npm run test && npm run rollup && npm run uglify",
+    "test": "mocha --compilers js:babel-core/register test.js"
   },
   "repository": {
     "type": "git",
