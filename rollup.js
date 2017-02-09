@@ -9,29 +9,15 @@ let config = {
     babel({
       presets: ['es2015-rollup'],
       babelrc: false
-    })
+    }),
+    commonjs()
   ]
 }
 
 rollup.rollup(config).then(bundle => {
   bundle.write({
-    format: 'umd',
+    format: 'iife',
     moduleName: 'PolylinearScale',
     dest: 'dist/polylinear-scale.js'
   })
 }).catch(err => console.error(err.stack))
-
-// config.plugins.push(resolve({
-//   jsnext: true,
-//   main: true
-// }))
-
-// config.plugins.push(commonjs())
-//
-// rollup.rollup(config).then(bundle => {
-//   bundle.write({
-//     format: 'iife',
-//     moduleName: 'PolylinearScale',
-//     dest: 'dist/polylinear-scale.pkgd.js'
-//   })
-// }).catch(err => console.error(err.stack))
