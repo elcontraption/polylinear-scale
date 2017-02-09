@@ -15,17 +15,19 @@ For an even simpler version that does not support multiple piecewise scales, see
 As a Node.js module:
 ```sh
 $ yarn add polylinear-scale
-$ # or
+
+# or
+
 $ npm install polylinear-scale
 ```
 
 CDN version:
 ```html
 <!-- Minified -->
-<script src="https://unpkg.com/polylinear-scale@1.1.2/dist/polylinear-scale.min.js"></script>
+<script src="https://unpkg.com/polylinear-scale/dist/polylinear-scale.min.js"></script>
 
 <!-- Un-minified -->
-<script src="https://unpkg.com/polylinear-scale@1.1.2/dist/polylinear-scale.js"></script>
+<script src="https://unpkg.com/polylinear-scale/dist/polylinear-scale.js"></script>
 ```
 
 ## Arguments
