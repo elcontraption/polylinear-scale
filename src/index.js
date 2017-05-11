@@ -24,13 +24,13 @@ function polylinearScale (domain, range, clamp) {
    * @return {Number}       The result
    */
   return function (value) {
-    let rangeMin
-    let rangeMax
-    let domain
-    let range
-    let ratio
-    let result
-    let i = 0
+    var rangeMin
+    var rangeMax
+    var domain
+    var range
+    var ratio
+    var result
+    var i = 0
 
     /* eslint-disable no-sequences */
     while (i < domains.length - 1) {
